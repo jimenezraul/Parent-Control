@@ -41,20 +41,17 @@ def disconnect():
 def get_clients_list():
     clients_list = get_leases()
     data = []
-    i = 0
     for clients in clients_list:
-        for _ in clients:
-            if i < len(clients) - 1:
-                mac = clients[i].split()[1]
-                ip_address = clients[i].split()[2]
-                client_name = clients[i].split()[3]
-                clients_info = {
-                    "mac": mac,
-                    "ip_address": ip_address,
-                    "name": client_name
-                }
-                data.append(clients_info)
-                i += 1
+        for i in range(len(clients) - 1):
+            mac = clients[i].split()[1]
+            ip_address = clients[i].split()[2]
+            client_name = clients[i].split()[3]
+            clients_info = {
+                "mac": mac,
+                "ip_address": ip_address,
+                "name": client_name
+            }
+            data.append(clients_info)
     return data
 
 
