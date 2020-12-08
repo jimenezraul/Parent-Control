@@ -1,4 +1,4 @@
-# Parental-Control
+# Parent-Control
 
 ### This application was tested on a Asus Router RT-AC68U
 
